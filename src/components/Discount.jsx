@@ -17,7 +17,7 @@ export default function Discount() {
           paperwork, no hoops. Just show your ID at the chair.
         </p>
         <div className="mt-10 inline-flex flex-col items-center">
-          <div className="font-serif text-6xl text-brass-400">15% Off</div>
+          <div className="font-serif text-6xl text-brass-400">25% Off</div>
           <div className="mt-2 text-xs uppercase tracking-[0.3em] text-ink-200/70">Every Visit, Every Service</div>
         </div>
       </div>
