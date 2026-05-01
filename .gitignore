@@ -38,3 +38,5 @@ pnpm-debug.log*
 # Windows zone identifiers
 *:Zone.Identifier
 *Zone.Identifier
+.env.ai.local
+.mcp.json

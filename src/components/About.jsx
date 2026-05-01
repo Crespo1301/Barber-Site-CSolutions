@@ -5,31 +5,30 @@ export default function About() {
         <div className="relative order-2 lg:order-1">
           <div className="absolute -inset-4 border border-brass-500/40" aria-hidden />
           <img
-            src="/images/headshot-owner.jpg"
-            alt="Owner of The Barber Studio"
+            src="/images/template-placeholder.svg"
+            alt="Template owner placeholder"
             className="relative w-full h-[520px] object-cover grayscale hover:grayscale-0 transition duration-700"
           />
         </div>
 
         <div className="order-1 lg:order-2">
-          <span className="divider-rule mb-6">The Barber</span>
+          <span className="divider-rule mb-6">Owner Story</span>
           <h2 className="font-serif text-4xl sm:text-5xl text-ink-100 leading-tight text-balance">
-            Built on craft, sharpened by every cut.
+            Replace this section with the barber&apos;s actual story.
           </h2>
           <p className="mt-6 text-ink-200 leading-relaxed text-lg">
-            What started as a passion for clean lines and timeless style turned into a chair people drive across
-            town for. Every appointment gets a real consultation, full attention, and the patience to do the
-            small stuff right. No assembly line, no rushing the finish.
+            This placeholder is meant for the owner background, approach to the craft, and the kind of experience
+            clients should expect in the chair. Keep it personal, direct, and local when this template is reused.
           </p>
           <p className="mt-5 text-ink-200 leading-relaxed">
-            The chair is open to first-time clients, regulars, fathers and sons, and anyone who has been
-            chasing a barber who actually listens. Walk in once. The rest takes care of itself.
+            Add trust markers that are actually true for the business: years of experience, specialties,
+            atmosphere, neighborhood credibility, and what makes the shop worth choosing.
           </p>
 
           <div className="mt-10 grid grid-cols-3 gap-6">
-            <Stat number="10+" label="Years Behind the Chair" />
-            <Stat number="2K+" label="Cuts and Counting" />
-            <Stat number="5★" label="Client Reviews" />
+            <Stat number="10+" label="Years Experience" />
+            <Stat number="2K+" label="Appointments Served" />
+            <Stat number="5 Star" label="Review Rating Slot" />
           </div>
         </div>
       </div>

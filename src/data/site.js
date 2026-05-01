@@ -1,16 +1,16 @@
 export const site = {
-  brand: 'The Barber Studio',
-  tagline: 'Precision Cuts. Classic Shaves. Modern Style.',
-  phone: '(555) 123-4567',
-  email: 'hello@thebarberstudio.com',
+  brand: 'Barber Studio Template',
+  tagline: 'Premium cuts, clean details, and a chair worth returning to.',
+  phone: '(000) 000-0000',
+  email: 'booking@example.com',
   address: {
-    line1: '123 Main Street',
+    line1: '123 Template Street',
     line2: 'Your City, ST 00000',
   },
   hours: [
-    { day: 'Tuesday – Friday', time: '9:00 AM – 7:00 PM' },
-    { day: 'Saturday', time: '9:00 AM – 5:00 PM' },
-    { day: 'Sunday – Monday', time: 'Closed' },
+    { day: 'Tuesday - Friday', time: '9:00 AM - 7:00 PM' },
+    { day: 'Saturday', time: '9:00 AM - 5:00 PM' },
+    { day: 'Sunday - Monday', time: 'Closed' },
   ],
   bookingUrl: '#contact',
   social: {
@@ -58,7 +58,7 @@ export const services = [
 ]
 
 export const cuts = [
-  { before: '/images/before/cut-1.jpg', after: '/images/after/cut-1.jpg', label: 'Skin fade with textured top' },
-  { before: '/images/before/cut-2.jpg', after: '/images/after/cut-2.jpg', label: 'Classic taper and beard sculpt' },
-  { before: '/images/before/cut-3.jpg', after: '/images/after/cut-3.jpg', label: 'Mid fade with scissor work' },
+  { before: '/images/template-placeholder.svg', after: '/images/template-placeholder.svg', label: 'Before / after slot' },
+  { before: '/images/template-placeholder.svg', after: '/images/template-placeholder.svg', label: 'Featured transformation slot' },
+  { before: '/images/template-placeholder.svg', after: '/images/template-placeholder.svg', label: 'Gallery placeholder slot' },
 ]

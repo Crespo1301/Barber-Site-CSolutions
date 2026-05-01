@@ -5,7 +5,7 @@ const links = [
   { href: '#about', label: 'About' },
   { href: '#services', label: 'Services' },
   { href: '#gallery', label: 'Gallery' },
-  { href: '#discount', label: 'Military' },
+  { href: '#discount', label: 'Offer' },
   { href: '#contact', label: 'Visit' },
 ]
 
@@ -29,7 +29,7 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-6 lg:px-10 flex items-center justify-between h-20">
         <a href="#top" className="flex items-center gap-3 group">
           <span className="w-9 h-9 rounded-full border border-brass-500 flex items-center justify-center text-brass-400 font-serif text-lg group-hover:bg-brass-500 group-hover:text-ink-950 transition">
-            B
+            T
           </span>
           <span className="font-serif text-xl tracking-wide text-ink-100">{site.brand}</span>
         </a>
@@ -46,7 +46,7 @@ export default function Navbar() {
           href={site.bookingUrl}
           className="hidden md:inline-flex items-center px-5 py-2.5 border border-brass-500 text-brass-400 text-xs uppercase tracking-[0.25em] hover:bg-brass-500 hover:text-ink-950 transition"
         >
-          Book Now
+          Contact
         </a>
 
         <button
@@ -71,7 +71,7 @@ export default function Navbar() {
               onClick={() => setOpen(false)}
               className="mt-2 inline-flex items-center justify-center px-5 py-3 border border-brass-500 text-brass-400 hover:bg-brass-500 hover:text-ink-950 transition"
             >
-              Book Now
+              Contact
             </a>
           </div>
         </div>

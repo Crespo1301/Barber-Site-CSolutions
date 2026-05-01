@@ -1,72 +1,51 @@
-# The Barber Studio
+# Barber Site Template
 
-A high-end marketing site for an independent barber. Built with Vite, React 19, and Tailwind CSS v4.
+Reusable proposal template for an independent barber brand.
 
-## Local development
+## Role In The Business
+
+- This repo is a sales asset and reusable mockup, not a main production client site right now.
+- It exists to help pitch a higher-end visual direction quickly.
+- Reuse it as a proposal template, but clear stale lead details before sharing it again.
+
+## Shared Docs
+
+- `CLAUDE.md`
+- `AI-WORKFLOW.md`
+- `SECURITY-CHECKLIST.md`
+
+## Stack
+
+- React 19
+- Vite 7
+- Tailwind CSS 4
+
+## Local Development
 
 ```bash
 npm install
 npm run dev
 ```
 
-Then open http://localhost:5173/ in a browser.
-
-## Build
+Useful build commands:
 
 ```bash
-npm run build      # outputs to dist/
-npm run preview    # serves the production build locally
+npm run build
+npm run lint
+npm run preview
 ```
 
-## Editing content
+## Main Editing Surfaces
 
-All client-facing copy lives in `src/data/site.js`:
+- `src/data/site.js` for brand copy, service pricing, phone, email, address, and hours
+- `public/images/` for approved client hero, owner, and gallery assets
 
-- Brand name, tagline, phone, email, address, and hours
-- Service menu and pricing
-- Before/after gallery captions
+## Working Rules
 
-Replace these placeholder values with the client's real details before going live.
+- Keep this repo in the proposal lane unless it gets promoted to real client work.
+- Replace placeholder content, contact details, and imagery before any live presentation to a prospect.
+- Use it as a reusable structure for local-service grooming or style-driven businesses.
 
-## Images
+## Security Notes
 
-Images are served from `public/images/`:
-
-- `studio-vertical.jpg` — hero background
-- `headshot-owner.jpg` — about section portrait
-- `military-discount.jpg` — discount section background
-- `before/cut-1..3.jpg` and `after/cut-1..3.jpg` — gallery comparison sliders
-
-To swap any image, drop a replacement into the same path with the same filename.
-
-## Deploying to Vercel
-
-1. Push the repo to GitHub:
-   ```bash
-   git add .
-   git commit -m "Initial barber site"
-   git push origin main
-   ```
-2. Go to https://vercel.com/new and import the repository.
-3. Vercel auto-detects Vite. Defaults are correct:
-   - Build command: `npm run build`
-   - Output directory: `dist`
-4. Click Deploy. The first preview URL is live in about a minute.
-
-## Connecting a custom domain
-
-Once the client approves the design:
-
-1. In the Vercel project, go to Settings → Domains and add the domain.
-2. Vercel shows the DNS records to add (typically an `A` record on `@` and a `CNAME` on `www`).
-3. Add those records at the domain registrar.
-4. Wait for DNS to propagate. Vercel handles the SSL certificate.
-
-## Tech stack
-
-- React 19
-- Vite 7
-- Tailwind CSS v4 (via `@tailwindcss/vite`)
-- ESLint 9 flat config
-
-No backend, no database, no environment variables required.
+Run `SECURITY-CHECKLIST.md` before demos or deploys. The main risks are stale lead data, unsafe form endpoints, and unnecessary third-party embeds.

@@ -7,7 +7,10 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "stitch:init": "npx -y @_davideast/stitch-mcp init",
+    "stitch:doctor": "bash ./scripts/stitch-doctor.sh",
+    "stitch:proxy": "bash ./scripts/stitch-proxy.sh"
   },
   "dependencies": {
     "react": "^19.1.0",

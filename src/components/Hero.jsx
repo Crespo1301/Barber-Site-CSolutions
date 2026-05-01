@@ -5,27 +5,27 @@ export default function Hero() {
     <section id="top" className="relative min-h-screen flex items-center overflow-hidden">
       <div
         className="absolute inset-0 bg-cover bg-center"
-        style={{ backgroundImage: 'url(/images/studio-vertical.jpg)' }}
+        style={{ backgroundImage: 'url(/images/template-placeholder.svg)' }}
       />
       <div className="absolute inset-0 bg-gradient-to-b from-ink-950/85 via-ink-950/70 to-ink-950" />
       <div className="absolute inset-0 bg-gradient-to-r from-ink-950/80 via-ink-950/40 to-transparent" />
 
       <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-10 pt-32 pb-20 w-full">
         <div className="max-w-2xl fade-up">
-          <span className="divider-rule mb-8">Established Craft</span>
+          <span className="divider-rule mb-8">Template Preview</span>
           <h1 className="font-serif text-5xl sm:text-6xl lg:text-7xl text-ink-100 leading-[1.05] text-balance">
             {site.tagline}
           </h1>
           <p className="mt-8 text-lg text-ink-200 max-w-xl leading-relaxed">
-            A focused barbershop built around the details. Sharp lines, hot towels, and the kind of conversation
-            that makes the chair feel like the best seat in town.
+            Use this template for a premium local barber brand. Swap in the owner story, photography, offers,
+            and booking flow once the client is approved.
           </p>
           <div className="mt-10 flex flex-wrap gap-4">
             <a
               href={site.bookingUrl}
               className="inline-flex items-center px-8 py-4 bg-brass-500 text-ink-950 text-xs uppercase tracking-[0.3em] font-medium hover:bg-brass-400 transition"
             >
-              Book Your Chair
+              Booking Placeholder
             </a>
             <a
               href="#services"
