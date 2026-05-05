@@ -4,7 +4,15 @@ import reactHooks from 'eslint-plugin-react-hooks'
 import reactRefresh from 'eslint-plugin-react-refresh'
 
 export default [
-  { ignores: ['dist', 'node_modules'] },
+  {
+    ignores: [
+      'dist',
+      'node_modules',
+      '.agents/**',
+      '.claude/**',
+      '.codex/**',
+    ],
+  },
   {
     files: ['**/*.{js,jsx}'],
     languageOptions: {
@@ -12,6 +20,13 @@ export default [
       sourceType: 'module',
       parserOptions: {
         ecmaFeatures: { jsx: true },
+      },
+      globals: {
+        window: 'readonly',
+        document: 'readonly',
+        setTimeout: 'readonly',
+        clearTimeout: 'readonly',
+        IntersectionObserver: 'readonly',
       },
     },
     settings: { react: { version: '19.0' } },

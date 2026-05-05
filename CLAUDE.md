@@ -32,6 +32,14 @@ npm run stitch:proxy
 ## Shared AI Tooling
 
 - Follow `AI-WORKFLOW.md` for the shared CSolutions AI stack.
-- Use repo-local `.claude/skills/` for `code-review-graph`, `Impeccable`, and `mattpocock/skills` workflows.
-- Use `.mcp.json` with `code-review-graph` after running `code-review-graph build` so exploration and reviews stay token-efficient.
+- Use repo-local `.claude/skills/` for `code-review-graph`, `Impeccable`, `ui-ux-pro-max`, and `mattpocock/skills` workflows.
+- Use repo-local `.codex/skills/` and `.agents/skills/` when Codex or agent-side work needs the same design or review system.
+- Use `.mcp.json` with `code-review-graph` after running `code-review-graph build --repo /home/cresp3/Barber-Site-CSolutions` so exploration and reviews stay token-efficient.
 - Use OpenSpec for larger changes that benefit from proposal, spec, and task artifacts.
+
+If Claude reports that the `build-graph` skill cannot find MCP tools:
+
+1. confirm `.mcp.json` exists in the repo root
+2. confirm it points to `/home/cresp3/.local/bin/code-review-graph`
+3. rerun `code-review-graph build --repo /home/cresp3/Barber-Site-CSolutions`
+4. restart the Claude session in this repo if needed so it reloads the MCP server

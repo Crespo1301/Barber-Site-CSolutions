@@ -2,7 +2,7 @@
   "mcpServers": {
     "code-review-graph": {
       "command": "/home/cresp3/.local/bin/code-review-graph",
-      "args": ["serve"]
+      "args": ["serve", "--repo", "/home/cresp3/Barber-Site-CSolutions"]
     },
     "stitch": {
       "command": "bash",

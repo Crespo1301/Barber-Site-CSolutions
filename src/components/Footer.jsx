@@ -2,44 +2,88 @@ import { site } from '../data/site'
 
 export default function Footer() {
   return (
-    <footer className="bg-ink-950 border-t border-ink-800">
-      <div className="max-w-7xl mx-auto px-6 lg:px-10 pt-12">
-        <div className="border border-brass-500/30 bg-ink-900/80 px-6 py-8 lg:px-8 lg:py-10 flex flex-col lg:flex-row lg:items-center lg:justify-between gap-6">
-          <div className="max-w-2xl">
-            <p className="text-[10px] uppercase tracking-[0.28em] text-brass-400">CSolutions Template</p>
-            <h3 className="mt-3 font-serif text-3xl text-ink-100">This design and others are available at carloscrespo.info.</h3>
-            <p className="mt-3 text-sm text-ink-200/75 leading-relaxed">
-              Like the direction? Reach out to get a version tailored to your business, brand, and local market.
+    <footer className="bg-ink text-bone">
+      <div className="max-w-7xl mx-auto px-6 lg:px-10 pt-20 lg:pt-28 pb-12">
+        <div className="grid lg:grid-cols-12 gap-10 lg:gap-14 items-end pb-14 lg:pb-20 border-b border-bone/10">
+          <div className="lg:col-span-7">
+            <div className="text-[11px] uppercase tracking-[0.32em] text-brass">CSolutions Template</div>
+            <h3 className="mt-5 font-serif text-4xl sm:text-5xl lg:text-6xl leading-[1.05] tracking-[-0.01em] text-bone text-balance">
+              Like The Look
+              <br />
+              <span className="italic font-light text-bone/65">
+                Built For Your Shop In Days, Not Months
+              </span>
+            </h3>
+            <p className="mt-6 max-w-xl text-bone/70 leading-relaxed">
+              This template is sold ready to deploy. Buyer brings their photos, services, and booking link;
+              CSolutions ships the rest. Dark variants, branded variants, and custom builds are also on offer.
             </p>
           </div>
-          <a
-            href="https://carloscrespo.info"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center justify-center px-6 py-3 bg-brass-500 text-ink-950 text-xs uppercase tracking-[0.24em] font-medium hover:bg-brass-400 transition"
-          >
-            Reach Out
-          </a>
+
+          <div className="lg:col-span-5 flex flex-col sm:flex-row lg:flex-col lg:items-end gap-4 lg:gap-5">
+            <a
+              href="https://carloscrespo.info"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn btn-brass"
+            >
+              Get This For Your Shop
+            </a>
+            <a
+              href={`mailto:${site.email}`}
+              className="btn btn-ghost-on-ink"
+            >
+              Talk To CSolutions
+            </a>
+          </div>
         </div>
-      </div>
-      <div className="max-w-7xl mx-auto px-6 lg:px-10 py-12 flex flex-col md:flex-row items-center justify-between gap-6">
-        <div className="flex items-center gap-3">
-          <span className="w-9 h-9 rounded-full border border-brass-500 flex items-center justify-center text-brass-400 font-serif">
-            B
+
+        <div className="pt-12 grid sm:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-12">
+          <div>
+            <div className="font-serif text-2xl tracking-tight text-bone">{site.brand}</div>
+            <div className="mt-1 text-[11px] uppercase tracking-[0.28em] text-bone/55">
+              Est. {site.established} · {site.cityTag}
+            </div>
+          </div>
+
+          <div>
+            <div className="text-[11px] uppercase tracking-[0.28em] text-bone/45 mb-3">Visit</div>
+            <p className="text-bone/85">{site.address.line1}</p>
+            <p className="text-bone/55 text-sm">{site.address.line2}</p>
+          </div>
+
+          <div>
+            <div className="text-[11px] uppercase tracking-[0.28em] text-bone/45 mb-3">Direct</div>
+            <a href={`tel:${site.phone.replace(/\D/g, '')}`} className="block text-bone/85 hover:text-brass">
+              {site.phone}
+            </a>
+            <a href={`mailto:${site.email}`} className="block text-bone/55 text-sm hover:text-brass mt-1">
+              {site.email}
+            </a>
+          </div>
+
+          <div>
+            <div className="text-[11px] uppercase tracking-[0.28em] text-bone/45 mb-3">Follow</div>
+            <a
+              href={site.social.instagram}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-bone/85 hover:text-brass"
+            >
+              Instagram
+            </a>
+          </div>
+        </div>
+
+        <div className="mt-16 pt-8 border-t border-bone/10 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 text-[11px] uppercase tracking-[0.28em] text-bone/45">
+          <span>&copy; {new Date().getFullYear()} {site.brand}. All rights reserved.</span>
+          <span>
+            Site by{' '}
+            <a href="https://carloscrespo.info" target="_blank" rel="noopener noreferrer" className="text-brass hover:text-bone">
+              CSolutions
+            </a>
           </span>
-          <span className="font-serif text-lg text-ink-100">{site.brand}</span>
         </div>
-
-        <p className="text-xs uppercase tracking-[0.25em] text-ink-200/60 text-center">
-          &copy; {new Date().getFullYear()} {site.brand}. All rights reserved.
-        </p>
-
-        <p className="text-xs uppercase tracking-[0.25em] text-ink-200/50">
-          Site by{' '}
-          <a href="https://carloscrespo.info" target="_blank" rel="noopener noreferrer" className="text-brass-400 hover:text-brass-300">
-            CSolutions
-          </a>
-        </p>
       </div>
     </footer>
   )

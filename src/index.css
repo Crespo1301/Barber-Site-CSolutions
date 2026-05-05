@@ -3,18 +3,23 @@
 @theme {
   --font-serif: "Cormorant Garamond", ui-serif, Georgia, serif;
   --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
 
-  --color-ink-950: #0a0a0a;
-  --color-ink-900: #111111;
-  --color-ink-800: #1a1a1a;
-  --color-ink-700: #262626;
-  --color-ink-200: #d4d4d4;
-  --color-ink-100: #e5e5e5;
+  /* Light canvas, warm bone, never pure white */
+  --color-bone: oklch(0.972 0.008 75);
+  --color-paper: oklch(0.942 0.012 75);
+  --color-rule: oklch(0.86 0.010 75);
 
-  --color-brass-300: #e7c794;
-  --color-brass-400: #d4af74;
-  --color-brass-500: #c69a55;
-  --color-brass-600: #a87f3e;
+  /* Dark slabs, warm near-black, never pure black */
+  --color-ink: oklch(0.165 0.012 60);
+  --color-ink-soft: oklch(0.235 0.012 60);
+  --color-graphite: oklch(0.44 0.014 60);
+  --color-graphite-light: oklch(0.62 0.012 60);
+
+  /* Brass accent, warm pomade-tin, not casino-yellow */
+  --color-brass: oklch(0.705 0.135 75);
+  --color-brass-deep: oklch(0.55 0.125 70);
+  --color-brass-soft: oklch(0.84 0.090 80);
 }
 
 html {
@@ -23,45 +28,164 @@ html {
 
 body {
   font-family: var(--font-sans);
-  background-color: var(--color-ink-950);
-  color: var(--color-ink-100);
+  background-color: var(--color-bone);
+  color: var(--color-ink);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  font-feature-settings: "ss01", "cv11";
+}
+
+::selection {
+  background-color: var(--color-ink);
+  color: var(--color-bone);
 }
 
 .font-serif {
   font-family: var(--font-serif);
-  letter-spacing: -0.01em;
+  letter-spacing: -0.012em;
+  font-feature-settings: "lnum", "ss01";
 }
 
-.text-balance {
-  text-wrap: balance;
+.font-mono {
+  font-family: var(--font-mono);
+  font-feature-settings: "tnum";
 }
 
-.divider-rule {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.75rem;
-  color: var(--color-brass-400);
-  font-size: 0.75rem;
-  letter-spacing: 0.35em;
+.text-balance { text-wrap: balance; }
+.text-pretty { text-wrap: pretty; }
+
+/* Eyebrow label used to introduce sections, typographic, no decorative rules */
+.eyebrow {
+  display: inline-block;
+  font-size: 0.6875rem;
+  letter-spacing: 0.32em;
   text-transform: uppercase;
+  font-weight: 500;
+  color: var(--color-brass-deep);
 }
 
-.divider-rule::before,
-.divider-rule::after {
-  content: "";
-  width: 2.5rem;
+.eyebrow-on-ink { color: var(--color-brass); }
+
+/* Hairline section divider */
+.hairline {
   height: 1px;
-  background-color: var(--color-brass-500);
-  opacity: 0.6;
+  background-color: var(--color-rule);
+  border: 0;
+}
+
+/* Reveal on intersect, handled by IntersectionObserver utility class */
+.reveal {
+  opacity: 0;
+  transform: translateY(14px);
+  transition: opacity 600ms cubic-bezier(0.25, 1, 0.5, 1),
+              transform 600ms cubic-bezier(0.25, 1, 0.5, 1);
+  will-change: opacity, transform;
+}
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Image reveal, gentle scale settle, opacity-dominant */
+.reveal-image {
+  opacity: 0;
+  transform: scale(1.03);
+  transition: opacity 700ms cubic-bezier(0.25, 1, 0.5, 1),
+              transform 900ms cubic-bezier(0.25, 1, 0.5, 1);
+}
+.reveal-image.is-visible {
+  opacity: 1;
+  transform: scale(1);
 }
 
 @keyframes fadeUp {
-  from { opacity: 0; transform: translateY(16px); }
+  from { opacity: 0; transform: translateY(14px); }
   to { opacity: 1; transform: translateY(0); }
 }
+.fade-up { animation: fadeUp 700ms cubic-bezier(0.25, 1, 0.5, 1) both; }
 
-.fade-up {
-  animation: fadeUp 0.8s ease-out both;
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .reveal,
+  .reveal-image,
+  .fade-up {
+    transition: none;
+    animation: none;
+    opacity: 1;
+    transform: none;
+  }
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    transition-duration: 0.001ms !important;
+  }
 }
+
+/* Focus ring, visible against both bone and ink surfaces */
+:focus-visible {
+  outline: 2px solid var(--color-brass);
+  outline-offset: 3px;
+  border-radius: 1px;
+}
+
+/* Underline-style input, used in Contact form */
+.input-line {
+  width: 100%;
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid var(--color-rule);
+  padding: 0.875rem 0;
+  font-size: 1rem;
+  color: var(--color-ink);
+  transition: border-color 200ms cubic-bezier(0.25, 1, 0.5, 1);
+}
+.input-line::placeholder {
+  color: var(--color-graphite-light);
+}
+.input-line:focus {
+  outline: none;
+  border-bottom-color: var(--color-ink);
+}
+
+/* Buttons, square-shouldered, tracked-up labels */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem 1.75rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  border-radius: 2px;
+  transition: background-color 200ms cubic-bezier(0.25, 1, 0.5, 1),
+              color 200ms cubic-bezier(0.25, 1, 0.5, 1),
+              border-color 200ms cubic-bezier(0.25, 1, 0.5, 1),
+              transform 200ms cubic-bezier(0.25, 1, 0.5, 1);
+}
+.btn:active { transform: translateY(1px); }
+
+.btn-primary {
+  background-color: var(--color-ink);
+  color: var(--color-bone);
+}
+.btn-primary:hover { background-color: var(--color-ink-soft); }
+
+.btn-brass {
+  background-color: var(--color-brass);
+  color: var(--color-ink);
+}
+.btn-brass:hover { background-color: var(--color-brass-deep); color: var(--color-bone); }
+
+.btn-ghost {
+  background-color: transparent;
+  color: var(--color-ink);
+  border: 1px solid var(--color-ink);
+}
+.btn-ghost:hover { background-color: var(--color-ink); color: var(--color-bone); }
+
+.btn-ghost-on-ink {
+  background-color: transparent;
+  color: var(--color-bone);
+  border: 1px solid var(--color-bone);
+}
+.btn-ghost-on-ink:hover { background-color: var(--color-bone); color: var(--color-ink); }

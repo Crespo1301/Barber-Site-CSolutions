@@ -1,46 +1,47 @@
+import { stats } from '../data/site'
+
 export default function About() {
   return (
-    <section id="about" className="bg-ink-950 py-28 lg:py-36">
-      <div className="max-w-7xl mx-auto px-6 lg:px-10 grid lg:grid-cols-2 gap-16 lg:gap-24 items-center">
-        <div className="relative order-2 lg:order-1">
-          <div className="absolute -inset-4 border border-brass-500/40" aria-hidden />
-          <img
-            src="/images/template-placeholder.svg"
-            alt="Template owner placeholder"
-            className="relative w-full h-[520px] object-cover grayscale hover:grayscale-0 transition duration-700"
-          />
+    <section id="about" className="bg-bone py-24 lg:py-32">
+      <div className="max-w-7xl mx-auto px-6 lg:px-10 grid lg:grid-cols-12 gap-10 lg:gap-16">
+        <div className="lg:col-span-5 lg:sticky lg:top-32 self-start">
+          <span className="eyebrow">The Owner</span>
+          <h2 className="mt-5 font-serif text-4xl sm:text-5xl lg:text-6xl leading-[1.05] text-balance text-ink">
+            Behind The Chair, A Craft Taken Seriously
+          </h2>
         </div>
 
-        <div className="order-1 lg:order-2">
-          <span className="divider-rule mb-6">Owner Story</span>
-          <h2 className="font-serif text-4xl sm:text-5xl text-ink-100 leading-tight text-balance">
-            Replace this section with the barber&apos;s actual story.
-          </h2>
-          <p className="mt-6 text-ink-200 leading-relaxed text-lg">
-            This placeholder is meant for the owner background, approach to the craft, and the kind of experience
-            clients should expect in the chair. Keep it personal, direct, and local when this template is reused.
+        <div className="lg:col-span-7 lg:pt-3">
+          <p className="font-serif text-2xl sm:text-3xl leading-snug text-pretty text-ink">
+            This is where the owner&apos;s story goes, how they learned the trade, what they care about, who they
+            cut for, and what a client should expect the moment they sit down.
           </p>
-          <p className="mt-5 text-ink-200 leading-relaxed">
-            Add trust markers that are actually true for the business: years of experience, specialties,
-            atmosphere, neighborhood credibility, and what makes the shop worth choosing.
+          <p className="mt-8 text-graphite leading-relaxed max-w-prose">
+            Replace this paragraph with the real background. Years in the chair, where they apprenticed, the
+            specialties (skin fades, beards, classic shaves), and the kind of room they want to run. Keep it
+            personal and direct. Local credibility beats corporate polish.
+          </p>
+          <p className="mt-5 text-graphite leading-relaxed max-w-prose">
+            A second paragraph for atmosphere: walk-in policy, music, whether kids are welcome, whether the
+            client should book online or call. Anything that lowers the barrier to that first visit.
           </p>
 
-          <div className="mt-10 grid grid-cols-3 gap-6">
-            <Stat number="10+" label="Years Experience" />
-            <Stat number="2K+" label="Appointments Served" />
-            <Stat number="5 Star" label="Review Rating Slot" />
-          </div>
+          <hr className="hairline my-12" />
+
+          <dl className="grid grid-cols-3 gap-8 sm:gap-12">
+            {stats.map((s) => (
+              <div key={s.label}>
+                <dt className="text-[11px] uppercase tracking-[0.28em] text-graphite-light leading-snug">
+                  {s.label}
+                </dt>
+                <dd className="mt-3 font-serif text-4xl sm:text-5xl text-ink leading-none">
+                  {s.value}
+                </dd>
+              </div>
+            ))}
+          </dl>
         </div>
       </div>
     </section>
-  )
-}
-
-function Stat({ number, label }) {
-  return (
-    <div className="border-l border-brass-500/50 pl-4">
-      <div className="font-serif text-3xl text-brass-400">{number}</div>
-      <div className="mt-1 text-xs uppercase tracking-[0.2em] text-ink-200/70 leading-snug">{label}</div>
-    </div>
   )
 }

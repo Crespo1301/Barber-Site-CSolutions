@@ -45,6 +45,12 @@ Use these local files in every repo:
 
 `.env.ai.local` and `.mcp.json` stay local-only and should not be committed.
 
+Repo-local skill surfaces in this repo:
+
+- Claude: `.claude/skills/`
+- Codex: `.codex/skills/`
+- agent-side shared skills: `.agents/skills/`
+
 For 21st.dev in Claude, prefer this pattern:
 
 1. keep shared AI keys in `$HOME/.env.ai.local`
@@ -88,6 +94,9 @@ Use these across active repos so Claude and Codex spend fewer tokens and work wi
 - `Impeccable`
   - Use it for design shaping, critique, polish, hardening, layout, and responsive cleanup.
   - Repo-local skills live under `.claude/skills/impeccable` and `.agents/skills/impeccable`.
+- `ui-ux-pro-max`
+  - Use it when the work is primarily visual, layout-driven, or about premium design decisions.
+  - Repo-local copies live under `.claude/skills/ui-ux-pro-max` and `.codex/skills/ui-ux-pro-max`.
 - `OpenSpec`
   - Use it for multi-step features, larger rebuilds, and any change that should leave behind a proposal/tasks trail.
   - Install with `npm install -g @fission-ai/openspec@latest`, then run `openspec init` once per repo and `openspec update` when refreshing commands.
@@ -98,6 +107,7 @@ Use these across active repos so Claude and Codex spend fewer tokens and work wi
 ## Token Efficiency Rule
 
 - Prefer `code-review-graph` plus targeted skills before broad file reads.
+- If a repo-specific graph skill complains about unavailable MCP tools, rebuild with the explicit repo path and make sure `.mcp.json` uses `serve --repo /home/cresp3/Barber-Site-CSolutions`.
 - Use Claude for visual, copy, and critique-heavy work.
 - Use Codex for implementation, verification, cleanup, and Git closeout.
 - Use OpenSpec only when the task is large enough to benefit from explicit proposal/spec/task artifacts.
