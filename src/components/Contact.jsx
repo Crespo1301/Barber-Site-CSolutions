@@ -25,8 +25,8 @@ export default function Contact() {
             Find The Chair
           </h2>
           <p className="mt-6 text-graphite leading-relaxed max-w-xl">
-            Walk in if the chair is open. Call ahead if you&apos;re coming from a distance. Text is the fastest
-            way to lock in a time.
+            This final section should remove friction. Give customers one clear way to book, one clear phone
+            number, and enough location info that showing up feels easy.
           </p>
 
           <form onSubmit={handleSubmit} className="mt-12 grid sm:grid-cols-2 gap-x-8 gap-y-2">

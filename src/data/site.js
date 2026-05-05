@@ -4,7 +4,7 @@ export const site = {
   monogram: 'BS',
   tagline: 'A Precision Haircut, A Clean Shave, A Chair Worth Returning To.',
   intro:
-    'A premium barbershop template built for solo barbers and shop owners ready to move past a Calendly link. Replace this copy with the owner\'s voice; the structure stays.',
+    'This opening section should quickly tell customers what kind of shop this is, who it serves, and why booking here feels worth it. Replace it with the owner\'s real voice and strongest first impression.',
   phone: '(000) 000-0000',
   email: 'booking@example.com',
   address: {
@@ -35,37 +35,37 @@ export const services = [
     name: 'Signature Cut',
     price: '35',
     duration: '45 Min',
-    description: 'Consultation, precision haircut, hot towel, and styling.',
+    description: 'Fill this with a core service your shop wants to sell often. Use the description to show what the customer gets and why this option is worth booking.',
   },
   {
     name: 'Skin Fade',
     price: '40',
     duration: '50 Min',
-    description: 'Bald or skin fade blended into your length, finished with razor detail work.',
+    description: 'Use this slot for a popular specialty. Showcase technique, finish, and the kind of client who usually chooses it.',
   },
   {
     name: 'Beard Trim & Shape',
     price: '20',
     duration: '20 Min',
-    description: 'Line-up, sculpt, condition. Hot towel and beard oil included.',
+    description: 'List the beard, lineup, or maintenance service that helps clients understand they can come in for smaller visits too.',
   },
   {
     name: 'Straight Razor Shave',
     price: '35',
     duration: '40 Min',
-    description: 'Hot towel, pre-shave oil, traditional lather, true straight razor finish.',
+    description: 'A good place for a premium or classic service. Explain the experience so it sounds elevated instead of generic.',
   },
   {
     name: 'The Full Service',
     price: '65',
     duration: '75 Min',
-    description: 'Signature cut paired with a classic shave and beard treatment.',
+    description: 'Use one slot for your higher-ticket package. This helps clients see the best-value option without feeling sold at.',
   },
   {
     name: 'Father & Son',
     price: '55',
     duration: '60 Min',
-    description: 'A cut for dad and a cut for the little man. Sons twelve and under.',
+    description: 'This last slot can highlight a family, seasonal, or community-focused offer that makes the shop feel more personal.',
   },
 ]
 
@@ -79,7 +79,7 @@ export const cuts = [
 export const offer = {
   eyebrow: 'House offer',
   headline: 'First visit, your way.',
-  body: 'Swap this section for a real promotion: a first-cut discount, a service-member rate, a referral perk, or a premium upsell. Keep one offer at a time so it actually moves the chair.',
+  body: 'Use this section for one real offer that helps convert hesitant visitors: first-visit pricing, a referral perk, a weekday fill-in special, or a premium add-on. Keep it simple so customers understand it immediately.',
   badge: '15% OFF',
   badgeLabel: 'First visit',
   fineprint: 'Replace with the actual terms when this template is filled in.',

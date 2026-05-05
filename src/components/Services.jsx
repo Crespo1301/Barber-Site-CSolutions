@@ -12,8 +12,8 @@ export default function Services() {
             </h2>
           </div>
           <p className="lg:col-span-5 text-graphite leading-relaxed">
-            Every service includes a consultation, hot towel, and styling. Walk-ins welcome when the chair is
-            open; appointments preferred. Prices are flat, no surprises at the register.
+            This section should make the service menu easy to scan. Show clear names, simple pricing, short
+            descriptions, and enough detail that a customer can choose without needing to call first.
           </p>
         </header>
 
@@ -49,7 +49,8 @@ export default function Services() {
 
         <div className="mt-14 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-6">
           <p className="text-graphite max-w-md leading-relaxed">
-            Can&apos;t find what you need? Ask. Custom requests are welcome, text the shop and we&apos;ll work it out.
+            Use this area to guide unsure customers toward booking. It works well for custom requests, add-on
+            notes, or a reminder that the barber can help them choose the right service.
           </p>
           <a href={site.bookingUrl} className="btn btn-primary self-start sm:self-auto">
             Reserve Your Time

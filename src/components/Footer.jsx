@@ -15,8 +15,8 @@ export default function Footer() {
               </span>
             </h3>
             <p className="mt-6 max-w-xl text-bone/70 leading-relaxed">
-              This template is sold ready to deploy. Buyer brings their photos, services, and booking link;
-              CSolutions ships the rest. Dark variants, branded variants, and custom builds are also on offer.
+              This template is meant to show how a barber site can look and how each section can support bookings,
+              trust, and better first impressions. CSolutions can customize this structure for a real shop fast.
             </p>
           </div>
 

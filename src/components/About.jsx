@@ -13,17 +13,17 @@ export default function About() {
 
         <div className="lg:col-span-7 lg:pt-3">
           <p className="font-serif text-2xl sm:text-3xl leading-snug text-pretty text-ink">
-            This is where the owner&apos;s story goes, how they learned the trade, what they care about, who they
-            cut for, and what a client should expect the moment they sit down.
+            This section should make the barber feel real. Use it to build trust, show personality, and explain
+            why someone should feel confident booking their first visit.
           </p>
           <p className="mt-8 text-graphite leading-relaxed max-w-prose">
-            Replace this paragraph with the real background. Years in the chair, where they apprenticed, the
-            specialties (skin fades, beards, classic shaves), and the kind of room they want to run. Keep it
-            personal and direct. Local credibility beats corporate polish.
+            Fill this with the owner&apos;s actual background: years of experience, specialties, training, and the
+            kind of experience they want to create in the shop. This is where customers decide whether the
+            business feels skilled, local, and worth trusting.
           </p>
           <p className="mt-5 text-graphite leading-relaxed max-w-prose">
-            A second paragraph for atmosphere: walk-in policy, music, whether kids are welcome, whether the
-            client should book online or call. Anything that lowers the barrier to that first visit.
+            Add a second paragraph for atmosphere and expectations: walk-ins, music, family-friendly details,
+            appointment flow, or anything else that lowers hesitation before that first booking.
           </p>
 
           <hr className="hairline my-12" />

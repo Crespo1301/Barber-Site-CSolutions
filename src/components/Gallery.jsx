@@ -15,8 +15,8 @@ export default function Gallery() {
             </h2>
           </div>
           <p className="lg:col-span-5 text-bone/70 leading-relaxed">
-            Drag any cut to reveal the transformation. Real clients, real chairs. Buyer can swap these images
-            for their own portfolio in <span className="font-mono text-[13px] text-bone/85">src/data/site.js</span>.
+            This is where the haircut quality should sell the shop. Replace these placeholders with strong
+            before-and-after photos so customers can quickly see range, consistency, and finished results.
           </p>
         </header>
 

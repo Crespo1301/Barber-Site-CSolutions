@@ -43,16 +43,16 @@ export default function Discount() {
 
               <ul className="space-y-2 text-bone/80 text-sm leading-relaxed">
                 <li className="flex justify-between gap-4">
-                  <span>Mention This Offer</span>
-                  <span className="text-bone/55">At Booking</span>
+                  <span>Keep One Offer Live</span>
+                  <span className="text-bone/55">Easy To Understand</span>
                 </li>
                 <li className="flex justify-between gap-4">
-                  <span>One Per Guest</span>
-                  <span className="text-bone/55">First Visit</span>
+                  <span>Use It To Convert</span>
+                  <span className="text-bone/55">First-Time Visitors</span>
                 </li>
                 <li className="flex justify-between gap-4">
-                  <span>Combine With</span>
-                  <span className="text-bone/55">None</span>
+                  <span>Swap As Needed</span>
+                  <span className="text-bone/55">Seasonal Or Referral</span>
                 </li>
               </ul>
             </div>
