@@ -82,9 +82,6 @@ export default function Navbar() {
               {l.label}
             </a>
           ))}
-          <a href={site.bookingUrl} onClick={() => setOpen(false)} className="btn btn-primary mt-2">
-            Book
-          </a>
         </div>
       </div>
     </header>

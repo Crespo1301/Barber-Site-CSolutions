@@ -8,8 +8,8 @@ export default function Hero() {
     >
       <div className="max-w-7xl mx-auto px-6 lg:px-10 pt-24 sm:pt-24 lg:pt-28 pb-12 sm:pb-14 lg:pb-18">
         <div className="grid lg:grid-cols-12 gap-8 lg:gap-12 items-end">
-          <div className="lg:col-span-7 fade-up">
-            <div className="flex items-center gap-4 mb-6">
+          <div className="lg:col-span-7 fade-up text-center lg:text-left">
+            <div className="flex items-center justify-center lg:justify-start gap-4 mb-6">
               <span className="block w-12 h-px bg-brass" aria-hidden />
               <span className="text-[11px] uppercase tracking-[0.32em] text-brass">
                 {site.cityTag} · Est. {site.established}
@@ -24,11 +24,11 @@ export default function Hero() {
               <span className="italic font-light text-graphite-light">A Chair Worth Returning To</span>
             </h1>
 
-            <p className="mt-5 max-w-xl text-[15px] sm:text-lg leading-relaxed text-bone/80">
+            <p className="mt-5 max-w-xl mx-auto lg:mx-0 text-[15px] sm:text-lg leading-relaxed text-bone/80">
               {site.intro}
             </p>
 
-            <div className="mt-7 flex flex-wrap gap-3 sm:gap-4 items-center">
+            <div className="mt-7 flex flex-wrap justify-center lg:justify-start gap-3 sm:gap-4 items-center">
               <a href={site.bookingUrl} className="btn btn-brass">
                 Book The Chair
               </a>
@@ -38,7 +38,7 @@ export default function Hero() {
             </div>
           </div>
 
-          <aside className="lg:col-span-5 grid grid-cols-3 gap-4 pt-6 lg:pt-0 fade-up" style={{ animationDelay: '180ms' }}>
+          <aside className="lg:col-span-5 grid grid-cols-3 gap-4 pt-6 lg:pt-0 text-center lg:text-left fade-up" style={{ animationDelay: '180ms' }}>
             <Pillar label="Walk-In" value="Welcome" />
             <Pillar label="Booking" value="Fast Reply" />
             <Pillar label="Cash &amp; Card" value="Accepted" />
@@ -47,7 +47,7 @@ export default function Hero() {
       </div>
 
       <div className="border-t border-bone/10">
-        <div className="max-w-7xl mx-auto px-6 lg:px-10 py-4 flex flex-wrap items-center justify-between gap-4 text-[11px] uppercase tracking-[0.32em] text-bone/55">
+        <div className="max-w-7xl mx-auto px-6 lg:px-10 py-4 flex flex-wrap items-center justify-center lg:justify-between gap-4 text-[11px] uppercase tracking-[0.32em] text-bone/55 text-center">
           <span>Tue – Sat By Appointment</span>
           <span aria-hidden>· · ·</span>
           <span>{site.phone}</span>

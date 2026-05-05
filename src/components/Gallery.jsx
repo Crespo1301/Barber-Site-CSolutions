@@ -5,7 +5,7 @@ export default function Gallery() {
   return (
     <section id="gallery" className="bg-ink text-bone py-24 lg:py-32">
       <div className="max-w-7xl mx-auto px-6 lg:px-10">
-        <header className="grid lg:grid-cols-12 gap-8 items-end mb-12 lg:mb-16">
+        <header className="grid lg:grid-cols-12 gap-8 items-end mb-12 lg:mb-16 text-center lg:text-left">
           <div className="lg:col-span-7">
             <span className="eyebrow eyebrow-on-ink">The Work</span>
             <h2 className="mt-5 font-serif text-4xl sm:text-5xl lg:text-6xl leading-[1.05] text-balance">
