@@ -55,7 +55,7 @@ export default function Navbar() {
           ))}
         </nav>
 
-        <a href={site.bookingUrl} className="hidden md:inline-flex btn btn-primary py-3 px-6">
+        <a href={site.bookingUrl} className="hidden lg:inline-flex btn btn-primary py-3 px-6">
           Book
         </a>
 
