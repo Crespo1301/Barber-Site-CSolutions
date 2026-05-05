@@ -55,9 +55,11 @@ export default function Navbar() {
           ))}
         </nav>
 
-        <a href={site.bookingUrl} className="hidden lg:inline-flex btn btn-primary py-3 px-6">
-          Book
-        </a>
+        <div className="hidden lg:block">
+          <a href={site.bookingUrl} className="btn btn-primary py-3 px-6">
+            Book
+          </a>
+        </div>
 
         <button
           type="button"
