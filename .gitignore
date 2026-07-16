@@ -40,3 +40,7 @@ pnpm-debug.log*
 *Zone.Identifier
 .env.ai.local
 .mcp.json
+.agents/
+.claude/
+.code-review-graph/
+.codex/
