@@ -70,3 +70,7 @@ The site was inverted from a dark-dominant lead mockup into a light-dominant edi
 - Should the template support a buyer-supplied logo upload slot in `site.js`, or keep the wordmark as the lockup?
 - Future variants (different brand identities the user mentioned) should branch off this base. A `themes/` folder under `src/` with named token sets is one route. Worth a brief design conversation before Codex implements.
 - Booking integration: keep mailto for v1, or stub a Booksy/Calendly link slot and document the swap in `site.js`.
+
+## Visual QA
+
+Use the workspace runner at `/home/cresp3/scripts/visual-check.sh` after any layout, responsive, spacing, animation, or visual-polish change. Start the local dev server, capture mobile and desktop screenshots into `.visual-checks/`, and inspect the rendered pixels before calling the work done. See `VISUAL-QA.md`.

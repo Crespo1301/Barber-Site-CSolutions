@@ -43,3 +43,7 @@ If Claude reports that the `build-graph` skill cannot find MCP tools:
 2. confirm it points to `/home/cresp3/.local/bin/code-review-graph`
 3. rerun `code-review-graph build --repo /home/cresp3/Barber-Site-CSolutions`
 4. restart the Claude session in this repo if needed so it reloads the MCP server
+
+## Visual QA
+
+Use the workspace runner at `/home/cresp3/scripts/visual-check.sh` after any layout, responsive, spacing, animation, or visual-polish change. Start the local dev server, capture mobile and desktop screenshots into `.visual-checks/`, and inspect the rendered pixels before calling the work done. See `VISUAL-QA.md`.

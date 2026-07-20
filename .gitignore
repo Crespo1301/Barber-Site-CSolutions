@@ -44,3 +44,6 @@ pnpm-debug.log*
 .claude/
 .code-review-graph/
 .codex/
+
+# Local browser QA screenshots
+.visual-checks/
