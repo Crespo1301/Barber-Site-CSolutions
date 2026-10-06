@@ -4,9 +4,9 @@
   "version": "1.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
+    "dev": "vite --host 0.0.0.0 --port 5176",
     "build": "vite build",
-    "preview": "vite preview",
+    "preview": "vite preview --host 0.0.0.0 --port 4177",
     "lint": "eslint .",
     "stitch:init": "npx -y @_davideast/stitch-mcp init",
     "stitch:doctor": "bash ./scripts/stitch-doctor.sh",
